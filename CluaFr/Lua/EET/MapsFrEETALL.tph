@@ -535,7 +535,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"BD0113", "Underground Cavern Wyrms"},~                                                         => 2521
 	~{"BD0114", "Spider Cave"},~                                                                      => 2522
 	~{"BD0115", "Vampire Cavern"},~                                                                   => 2523
-	~{"BD0116", "Ducal Palace, Basement"},~                                                           => 2524
+	~{"BD0116", "Ducal Palace  Basement"},~                                                           => 2524
 	~{"BD0117", "Iron Throne  Basement"},~                                                            => 2525
 	~{"BD0118", "The Scrying Pool - Imoen Cutscene"},~                                                => 2526
 	~{"BD0120", "Tomb Safehouse  First Floor"},~                                                      => 2527
@@ -602,7 +602,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR0065", "Empty (Triggers, Doors... are there but no area)"},~                                 => 2585
 	~{"AR0069", "Government Building (Cowled Cutscene -- 'Why is this man not gagged\?')"},~          => 2586
 	~{"AR0070", "Spellhold (Irenicus Cutscene -- 'I cannot be caged...')"},~                          => 2587
-	~{"AR0071", "Spellhold (Imoen Soultheft Cutscene -- 'Silence do, you have no purpose...')"},~     => 2588
+	~{"AR0071", "Spellhold (Imoen Soultheft Cutscene -- 'Silence, dog! You have no purpose...')"},~   => 2588
 	~{"AR0072", "Ust Natha Temple (Irenicus/Bodhi, Ardula/Phaere Cutscene)"},~                        => 2589
 	~{"AR0082", "Lich Grave in Bridge District Inn"},~                                                => 2590
 	~{"AR0083", "Candlekeep Library (Dream: PC learns to control the Slayer)"},~                      => 2591
@@ -631,9 +631,9 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR0312", "Sleeping Room (Entry point down) -- Arledrian"},~                                    => 2614
 	~{"AR0313", "Sea Bounty Tavern 1st Floor"},~                                                      => 2615
 	~{"AR0314", "Sea Bounty Tavern 2nd Floor"},~                                                      => 2616
-	~{"AR0315", "Living Room (Favour for Edwin -- Mae'Var Plot)"},~                                   => 2617
-	~{"AR0316", "Sleeping Room (Favour for Edwin -- Mae'Var Plot)"},~                                 => 2618
-	~{"AR0317", "Sleeping Room (Favour for Edwin -- Mae'Var Plot)"},~                                 => 2619
+	~{"AR0315", "Living Room (Favor for Edwin -- Mae'Var Plot)"},~                                   => 2617
+	~{"AR0316", "Sleeping Room (Favor for Edwin -- Mae'Var Plot)"},~                                 => 2618
+	~{"AR0317", "Sleeping Room (Favor for Edwin -- Mae'Var Plot)"},~                                 => 2619
 	~{"AR0318", "Storage Room"},~                                                                     => 2620
 	~{"AR0319", "Temple of Oghma"},~                                                                  => 2621
 	~{"AR0321", "Thief Stronghold (Hideout)"},~                                                       => 2622
@@ -664,7 +664,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR0410", "Sphere: Navigator's room -- Lavok's Hideout"},~                                      => 2647
 	~{"AR0411", "Sphere: Entrance floor"},~                                                           => 2648
 	~{"AR0412", "Sphere: Ice and Fire Room"},~                                                        => 2649
-	~{"AR0413", "Sphere: Enginge Room"},~                                                             => 2650
+	~{"AR0413", "Sphere: Engine Room"},~                                                             => 2650
 	~{"AR0414", "Sphere: Demon Plane"},~                                                              => 2651
 	~{"AR0415", "Living Room 1st Floor"},~                                                            => 2652
 	~{"AR0416", "Living Room 2nd Floor"},~                                                            => 2653
@@ -717,7 +717,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR0703", "Temple of Ilmater"},~                                                                => 2700
 	~{"AR0704", "Mithrest Inn"},~                                                                     => 2701
 	~{"AR0705", "Mekrath's Hideout in the Sewers (Haer'Dalis Plot)"},~                                => 2702
-	~{"AR0706", "Armourer/Fletcher"},~                                                                => 2703
+	~{"AR0706", "Armorer/Fletcher"},~                                                                => 2703
 	~{"AR0707", "Enge's Shop"},~                                                                      => 2704
 	~{"AR0708", "Cernd's former home"},~                                                              => 2705
 	~{"AR0709", "Den of the Seven Vales 1st Floor"},~                                                 => 2706
@@ -750,7 +750,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR0907", "Guarded Compound 2nd Floor"},~                                                       => 2733
 	~{"AR1000", "Government District"},~                                                              => 2734
 	~{"AR1001", "Delryn's Estate"},~                                                                  => 2735
-	~{"AR1002", "Councel Building"},~                                                                 => 2736
+	~{"AR1002", "Council Building"},~                                                                 => 2736
 	~{"AR1003", "Firecam's Estate"},~                                                                 => 2737
 	~{"AR1004", "Deril's Estate (Cernd Plot)"},~                                                      => 2738
 	~{"AR1005", "Prison"},~                                                                           => 2739
@@ -918,11 +918,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR3004", "Watcher's Keep"},~                                                                   => 2895
 	~{"AR3005", "Watcher's Keep -- tieflings"},~                                                      => 2896
 	~{"AR3006", "Watcher's Keep -- Succubus"},~                                                       => 2897
-	~{"AR3007", "Watcher's Keep --Cambion"},~                                                         => 2898
+	~{"AR3007", "Watcher's Keep -- Cambion"},~                                                        => 2898
 	~{"AR3008", "Watcher's Keep -- Baalor (Paladin Sword)"},~                                         => 2899
 	~{"AR3009", "Watcher's Keep -- Wild Magic \?"},~                                                  => 2900
 	~{"AR3010", "Watcher's Keep -- Tanar'ri -- Obelisk"},~                                            => 2901
-	~{"AR3011", "Watcher's Keep -- Bard's Gloves, Manman's Journal"},~                                => 2902
+	~{"AR3011", "Watcher's Keep -- Bard's Gloves, Madman's Journal"},~                                => 2902
 	~{"AR3012", "Watcher's Keep -- Tahazzar"},~                                                       => 2903
 	~{"AR3013", "Watcher's Keep -- Ka'rashur"},~                                                      => 2904
 	~{"AR3014", "Watcher's Keep -- White Dragon Scales"},~                                            => 2905
@@ -984,7 +984,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR6005", "Abazigal's Hideout"},~                                                               => 2958
 	~{"AR6008", "Frost Salamander Cave"},~                                                            => 2959
 	~{"AR6011", "Orbs and Gauth"},~                                                                   => 2960
-	~{"AR6012", "Pool Home -- breath under water"},~                                                  => 2961
+	~{"AR6012", "Pool Home -- breathe under water"},~                                                 => 2961
 	~{"AR6100", "Area outside Sendai's Hideout"},~                                                    => 2962
 	~{"AR6101", "Main Entrance Sendai's Lair"},~                                                      => 2963
 	~{"AR6102", "Sendai's Lair -- Slavemaster"},~                                                     => 2964
