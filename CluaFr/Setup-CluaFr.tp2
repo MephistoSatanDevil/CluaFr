@@ -1,23 +1,49 @@
-BACKUP ~CluaFr/backup~    // location to store files for uninstall purposes
+BACKUP ~weidu_external/CluaFr/backup~    // location to store files for uninstall purposes
 SUPPORT ~(https://www.baldursgateworld.fr)~  // email address displayed if install fails
 README ~CluaFr/readme.txt~
 
+ALWAYS
 
-VERSION  ~1.2~
+	DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+	COPY ~CluaFr/Languages/french~				~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
+	COPY ~CluaFr/Languages/%LANGUAGE%~				~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
+	END
+
+	LAF autotra_workaround END
+	
+END
+
+VERSION  ~2.0~
 
 ASK_EVERY_COMPONENT
 
+AUTO_TRA ~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
+
 LANGUAGE ~Francais~
          ~french~
-         ~CluaFr/language/french/setup.tra~
-         ~CluaFr/language/french/MapsFrIWDEE.tra~
-         ~CluaFr/language/french/MapsFrEET.tra~
-         ~CluaFr/language/french/MapsFrEETALL.tra~
-         ~CluaFr/language/french/MapsFrBGEE.tra~
-         ~CluaFr/language/french/MapsFrCleanSoD.tra~
-         ~CluaFr/language/french/MapsFrSoD.tra~
-         ~CluaFr/language/french/MapsFrBG2EE.tra~
-         ~CluaFr/language/french/MapsFrMods.tra~
+         ~CluaFr/Languages/french/setup.tra~
+         ~CluaFr/Languages/french/MapsFrIWDEE.tra~
+         ~CluaFr/Languages/french/MapsFrEET.tra~
+         ~CluaFr/Languages/french/MapsFrEETALL.tra~
+         ~CluaFr/Languages/french/MapsFrBGEE.tra~
+         ~CluaFr/Languages/french/MapsFrCleanSoD.tra~
+         ~CluaFr/Languages/french/MapsFrSoD.tra~
+         ~CluaFr/Languages/french/MapsFrBG2EE.tra~
+         ~CluaFr/Languages/french/MapsFrMods.tra~
+         ~CluaFr/Languages/french/InfinityUI.tra~
+		 
+LANGUAGE ~Simplified Chinese~
+         ~schinese~
+         ~CluaFr/Languages/schinese/setup.tra~
+         ~CluaFr/Languages/schinese/MapsFrIWDEE.tra~
+         ~CluaFr/Languages/schinese/MapsFrEET.tra~
+         ~CluaFr/Languages/schinese/MapsFrEETALL.tra~
+         ~CluaFr/Languages/schinese/MapsFrBGEE.tra~
+         ~CluaFr/Languages/schinese/MapsFrCleanSoD.tra~
+         ~CluaFr/Languages/schinese/MapsFrSoD.tra~
+         ~CluaFr/Languages/schinese/MapsFrBG2EE.tra~
+         ~CluaFr/Languages/schinese/MapsFrMods.tra~
+         ~CluaFr/Languages/schinese/InfinityUI.tra~
 
 
 	//////////////////////////////////////
@@ -28,6 +54,7 @@ LANGUAGE ~Francais~
 BEGIN @12 SUBCOMPONENT  @10
 DESIGNATED 12
 REQUIRE_PREDICATE GAME_IS ~BGEE BG2EE EET IWDEE~ @1
+LABEL ~CluArea-Main~
 
 ACTION_IF (GAME_IS ~EET~) BEGIN
     INCLUDE ~CluaFr/Lua/EET/MapsFrEET.tph~ // CheatsAreas pour EET
@@ -56,31 +83,81 @@ END
 
 BEGIN @13 SUBCOMPONENT  @10
 DESIGNATED 13
+LABEL ~CluArea-All~
 REQUIRE_PREDICATE GAME_IS ~BGEE BG2EE EET IWDEE~ @1
 // REQUIRE_PREDICATE NOT MOD_IS_INSTALLED ~INFINITY_UI.TP2~ ~0~ ~Infinity UI incompatibility~ 
 
 ACTION_IF (GAME_IS ~EET~) BEGIN
-    INCLUDE ~CluaFr/Lua/EET/MapsFrEETALL.tph~ // CheatsAreas pour EET
+			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+				COPY_EXISTING ~CluaFr/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAEET~ ~100~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~101~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~102~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~103~
+			END ELSE BEGIN
+				COPY_EXISTING ~CluaFr/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAEET~ ~2001~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~2493~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~2566~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~2919~
+			END
+    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~ // CheatsAreas pour EET
 	PRINT ~CheatsAreas pour EET ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND NOT GAME_INCLUDES ~sod~) BEGIN
     /* INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour BGEE
 	PRINT ~Cleaned CheatsAreas pour BGEE~ */
-    INCLUDE ~CluaFr/Lua/BGEE/MapsFrBGEEALL.tph~  // CheatsAreas pour BGEE
+			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+				COPY_EXISTING ~CluaFr/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~104~
+			END ELSE BEGIN
+				COPY_EXISTING ~CluaFr/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~998~
+			END
+    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~  // CheatsAreas pour BGEE
 	PRINT ~CheatsAreas pour BGEE ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND GAME_INCLUDES ~SoD~) BEGIN
+			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+				COPY_EXISTING ~CluaFr/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~104~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~101~
+			END ELSE BEGIN
+				COPY_EXISTING ~CluaFr/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~998~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~2493~
+			END
     INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour SoD
 	PRINT ~Cleaned CheatsAreas pour SoD~
-    INCLUDE ~CluaFr/Lua/SoD/MapsFrSoDALL.tph~  // CheatsAreas pour SoD
+    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~  // CheatsAreas pour SoD
 	PRINT ~CheatsAreas pour SoD ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BG2EE~) BEGIN
-    INCLUDE ~CluaFr/Lua/BG2EE/MapsFrBG2EEALL.tph~ // CheatsAreas pour BG2EE
+			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+				COPY_EXISTING ~CluaFr/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~102~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~103~
+			END ELSE BEGIN
+				COPY_EXISTING ~CluaFr/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~2566~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~2919~
+			END
+    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour BG2EE ALL~
 END
 ELSE ACTION_IF (GAME_IS ~IWDEE~) BEGIN
-    INCLUDE ~CluaFr/Lua/IWDEE/MapsFrIWDEEALL.tph~ // CheatsAreas pour BG2EE
+			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
+				COPY_EXISTING ~CluaFr/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAIWD~ ~105~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAHoW~ ~106~
+					REPLACE_TEXTUALLY ~REPLACE_CLUATotL~ ~107~
+			END ELSE BEGIN
+				COPY_EXISTING ~CluaFr/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAIWD~ ~3307~
+					REPLACE_TEXTUALLY ~REPLACE_CLUAHoW~ ~3308~
+					REPLACE_TEXTUALLY ~REPLACE_CLUATotL~ ~3309~
+			END
+    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour IWDEE ALL~
 END
 
@@ -88,13 +165,6 @@ END
 // Infinity UI compatibility
 
 ACTION_IF (GAME_IS ~EET~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-
-    COPY_EXISTING ~bgee.lua~ ~override~
-        REPLACE_TEXTUALLY ~	{"  ", "        BALDUR'S GATE        "},~ ~	{"CLUAEET", "        BALDUR'S GATE        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        SIEGE OF DRAGONSPEAR        "},~ ~	{"CLUASoD", "        SIEGE OF DRAGONSPEAR        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        SHADOWS OF AMN        "},~ ~	{"CLUASoA", "        SHADOWS OF AMN        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        THRONE OF BHAAL        "},~ ~	{"CLUAToB", "        THRONE OF BHAAL        "},~
-    BUT_ONLY IF_EXISTS
 	
     COPY_EXISTING ~UI.MENU~ ~override~
         REPLACE_TEXTUALLY ~"BD0010"~ ~"CLUASoD"~
@@ -103,10 +173,6 @@ ACTION_IF (GAME_IS ~EET~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
   END
   
 ACTION_IF (GAME_IS ~BGEE~ AND NOT GAME_INCLUDES ~sod~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-
-    COPY_EXISTING ~bgee.lua~ ~override~
-        REPLACE_TEXTUALLY ~	{"  ", "        BALDUR'S GATE        "},~ ~	{"CLUABG", "        BALDUR'S GATE        "},~
-    BUT_ONLY IF_EXISTS
 	
     COPY_EXISTING ~UI.MENU~ ~override~
         REPLACE_TEXTUALLY ~"AR0002"~ ~"CLUABG"~
@@ -114,11 +180,6 @@ ACTION_IF (GAME_IS ~BGEE~ AND NOT GAME_INCLUDES ~sod~ AND MOD_IS_INSTALLED ~infi
   END
   
 ACTION_IF (GAME_IS ~BGEE~ AND GAME_INCLUDES ~SoD~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-
-    COPY_EXISTING ~bgee.lua~ ~override~
-        REPLACE_TEXTUALLY ~	{"  ", "        BALDUR'S GATE        "},~ ~	{"CLUABG", "        BALDUR'S GATE        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        SIEGE OF DRAGONSPEAR        "},~ ~	{"CLUASoD", "        SIEGE OF DRAGONSPEAR        "},~
-    BUT_ONLY IF_EXISTS
 	
     COPY_EXISTING ~UI.MENU~ ~override~
         REPLACE_TEXTUALLY ~"BD0010"~ ~"CLUASoD"~
@@ -126,11 +187,6 @@ ACTION_IF (GAME_IS ~BGEE~ AND GAME_INCLUDES ~SoD~ AND MOD_IS_INSTALLED ~infinity
   END
   
 ACTION_IF (GAME_IS ~BG2EE~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-
-    COPY_EXISTING ~bgee.lua~ ~override~
-        REPLACE_TEXTUALLY ~	{"  ", "        SHADOWS OF AMN        "},~ ~	{"CLUASoA", "        SHADOWS OF AMN        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        THRONE OF BHAAL        "},~ ~	{"CLUAToB", "        THRONE OF BHAAL        "},~
-    BUT_ONLY IF_EXISTS
 	
     COPY_EXISTING ~UI.MENU~ ~override~
         REPLACE_TEXTUALLY ~"AR0011"~ ~"CLUASoA"~
@@ -138,12 +194,6 @@ ACTION_IF (GAME_IS ~BG2EE~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
   END
   
 ACTION_IF (GAME_IS ~IWDEE~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-
-    COPY_EXISTING ~bgee.lua~ ~override~
-        REPLACE_TEXTUALLY ~	{"  ", "        ICEWIND DALE I        "},~ ~	{"CLUAIWD", "        ICEWIND DALE I        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        HEART OF WINTER        "},~ ~	{"CLUAHoW", "        HEART OF WINTER        "},~
-        REPLACE_TEXTUALLY ~	{"  ", "        TRIALS OF THE LUREMASTER        "}, ~ ~	{"CLUATotL", "        TRIALS OF THE LUREMASTER        "}, ~
-    BUT_ONLY IF_EXISTS
 	
     COPY_EXISTING ~UI.MENU~ ~override~
         REPLACE_TEXTUALLY ~"AR1000"~ ~"CLUAIWD"~
@@ -153,6 +203,8 @@ ACTION_IF (GAME_IS ~IWDEE~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
 
 BEGIN @11   // CheatsAreas pour les mods
 DESIGNATED 11
+LABEL ~CluArea-Mods~
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~CluaFr.tp2~ ~12~ OR MOD_IS_INSTALLED ~CluaFr.tp2~ ~13~) ~Necessite main component~
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-CTB.TP2~ ~0~) BEGIN
   INCLUDE ~CluaFr/Lua/Mods/Checkthebodies.tph~ // CheatsAreas pour Check the bodies

@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour Icewind Dale 1                                                                          // MapsFrIWDEE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR1000","Easthaven (prologue)"},~                                                               => 3307
+	~{"AR1000","Easthaven (prologue)"},~                                                               => REPLACE_CLUAIWD
 	~{"AR1001","Easthaven (prologue) - Temple of Tempus"},~                                            => 3135
 	~{"AR1002","Easthaven (prologue) - Townsperson home"},~                                            => 3136
 	~{"AR1003","Easthaven (prologue) - Townsperson home"},~                                            => 3137
@@ -134,7 +134,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	
 	// CheatsAreas pour Heart of Winter                                                                        // MapsFrIWDEE.tra
 	
-	~{"AR9100","Lonelywood"},~                                                                         => 3308   
+	~{"AR9100","Lonelywood"},~                                                                         => REPLACE_CLUAHoW   
 	~{"AR9101","Lonelywood - Whistling Gallows - first floor"},~                                       => 3263
 	~{"AR9102","Lonelywood - Whistling Gallows - second floor"},~                                      => 3264
 	~{"AR9103","Lonelywood - Temple of Waukeen"},~                                                     => 3265
@@ -158,7 +158,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"AR9602","Sea of Moving Ice - Field of Bones"},~                                                 => 3283
 	~{"AR9603","Sea of Moving Ice - Icasaracht lair exterior"},~                                       => 3284
 	~{"AR9604","Sea of Moving Ice - Icasaracht lair interior"},~                                       => 3285
-	~{"AR9700","Anauroch Castle - outer courtyard (TotL start area)"},~                                => 3309
+	~{"AR9700","Anauroch Castle - outer courtyard (TotL start area)"},~                                => REPLACE_CLUATotL
 	~{"AR9701","Anauroch Castle - south Tower basement - battle test"},~                               => 3287
 	~{"AR9702","Anauroch Castle - south tower upstairs - wyverns"},~                                   => 3288
 	~{"AR9703","Anauroch Castle - west Tower basement - intelligence test"},~                          => 3289

@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour BGEE                                                                        // MapsFrBGEE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR0002", "Temple of Helm (Baldur's Gate)"},~                                                   => 998  
+	~{"AR0002", "Temple of Helm (Baldur's Gate)"},~                                                   => REPLACE_CLUABG  
 	~{"AR0004", "Behren's home, ground floor"},~                                                      => 4002  
 	~{"AR0005", "Behren's home, second floor (Pixie the Cat)"},~                                      => 4003  
 	~{"AR0006", "Rinnie's home, ground floor"},~                                                      => 4004  
@@ -509,7 +509,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour SoD                                                                          // MapsFrEETALL.tra
 
-	~{"BD0010", "Ducal Palace City Exterior"},~                                                       => 2493
+	~{"BD0010", "Ducal Palace City Exterior"},~                                                       => REPLACE_CLUASoD
 	~{"BD0020", "Sorcerous/Elf Song City Exterior"},~                                                 => 2494
 	~{"BD0030", "Flaming Fist City Exterior"},~                                                       => 2495
 	~{"BD0040", "Three Kegs City Exterior"},~                                                         => 2496

@@ -10,6 +10,7 @@
 	// CheatsAreas BG2EE ALL
 
 @994 = ~{"OH7200", "(SoA)  Tombe inférieur Est, Quête de Hexxat"},
+	--End SoA Areas
 	{"  ", "        GLADIATORS OF THAY        "},
 	{"OH8000", "(FN2)  Comptoir de Suzail"},
 	{"OH8100", "(FN2)  Zone de repos"},

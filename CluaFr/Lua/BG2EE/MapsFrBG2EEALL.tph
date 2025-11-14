@@ -10,7 +10,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas SoA                                                                                // MapsFrEETALL.tra
 
-	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                                => 2566
+	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                                => REPLACE_CLUASoA
 	~{"AR0012", "Candlekeep Library (Main Door Trigger)"},~                                           => 2567
 	~{"AR0013", "Candlekeep Library (Stairway Triggers Up and Down)"},~                               => 2568
 	~{"AR0014", "Candlekeep Library (Stairway Trigger Down)"},~                                       => 2569
@@ -372,7 +372,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB
 
-	~{"AR4000", "Spirit Heads"},~                                                                     => 2919
+	~{"AR4000", "Spirit Heads"},~                                                                     => REPLACE_CLUAToB
 	~{"AR4500", "Pocket Plane"},~                                                                     => 2920
 	~{"AR5000", "Saradush"},~                                                                         => 2921
 	~{"AR5001", "Gromnir 1st Level"},~                                                                => 2922

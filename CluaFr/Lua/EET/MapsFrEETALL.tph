@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour BGEE                                                                         // MapsFrEETALL.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"BG0002", "N Baldur's Gate: Temple of Helm"},~                                                  => 2001  
+	~{"BG0002", "N Baldur's Gate: Temple of Helm"},~                                                  => REPLACE_CLUAEET  
 	~{"BG0004", "N Baldur's Gate: Bheren's House L1"},~                                               => 2002  
 	~{"BG0005", "N Baldur's Gate: Bheren's House L2"},~                                               => 2003  
 	~{"BG0006", "N Baldur's Gate: Rinnie's House L1"},~                                               => 2004  
@@ -504,7 +504,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour SoD
 
-	~{"BD0010", "Ducal Palace City Exterior"},~                                                       => 2493
+	~{"BD0010", "Ducal Palace City Exterior"},~                                                       => REPLACE_CLUASoD
 	~{"BD0020", "Sorcerous/Elf Song City Exterior"},~                                                 => 2494
 	~{"BD0030", "Flaming Fist City Exterior"},~                                                       => 2495
 	~{"BD0040", "Three Kegs City Exterior"},~                                                         => 2496
@@ -580,7 +580,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas SoA
 
-	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                                => 2566
+	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                                => REPLACE_CLUASoA
 	~{"AR0012", "Candlekeep Library (Main Door Trigger)"},~                                           => 2567
 	~{"AR0013", "Candlekeep Library (Stairway Triggers Up and Down)"},~                               => 2568
 	~{"AR0014", "Candlekeep Library (Stairway Trigger Down)"},~                                       => 2569
@@ -942,7 +942,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB
 
-	~{"AR4000", "Spirit Heads"},~                                                                     => 2919
+	~{"AR4000", "Spirit Heads"},~                                                                     => REPLACE_CLUAToB
 	~{"AR4500", "Pocket Plane"},~                                                                     => 2920
 	~{"AR5000", "Saradush"},~                                                                         => 2921
 	~{"AR5001", "Gromnir 1st Level"},~                                                                => 2922

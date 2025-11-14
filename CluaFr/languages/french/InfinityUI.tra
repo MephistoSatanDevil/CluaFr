@@ -1,0 +1,27 @@
+// @100 à @115
+
+	// CheatsAreas pour InfinityUI compatibility
+
+@100 = ~{"CLUAEET", "        BALDUR'S GATE        "},
+	{"BG0002", "(BG)  Temple de Heaum (N)"},~
+
+@101 = ~{"CLUASoD", "        SIEGE OF DRAGONSPEAR        "},
+	{"BD0010", "(SoD)  Palais Ducal"},~
+
+@102 = ~{"CLUASoA", "        SHADOWS OF AMN        "},
+	{"AR0011", "(Rêve)  Souvenirs de Château-Suif"},~
+
+@103 = ~{"CLUAToB", "        THRONE OF BHAAL        "},
+	{"AR4000", "(ToB)  Bosquet Sacré, ILLASERA"},~
+
+@104 = ~{"CLUABG", "        BALDUR'S GATE        "},
+	{"AR0002", "(BG)  Temple de Heaum (N)"},~
+
+@105 = ~{"CLUAIWD", "        ICEWIND DALE I        "},
+	{"AR1000", "    HAVREDEST,  (Prologue)"},~
+
+@106 = ~{"CLUAHoW", "        HEART OF WINTER        "},
+	{"AR9100", "(HoW)  Le Bois Isolé"},~
+
+@107 = ~{"CLUATotL", "        TRIALS OF THE LUREMASTER        "},         
+	{"AR9700", "(TotLM) Forteresse de Maluradek (Commencement)"},~ 
