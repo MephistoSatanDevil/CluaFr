@@ -1,7 +1,18 @@
-# CluaFr
+# CluAreas
 
+[![Release](https://img.shields.io/github/v/release/The-Gate-Project/CluAreas?include_prereleases&color=41788a)](https://github.com/The-Gate-Project/CluAreas/releases)
+[![Published](https://img.shields.io/github/release-date-pre/The-Gate-Project/CluAreas?display_date=published_at&label=published&color=014a69)](https://github.com/The-Gate-Project/CluAreas/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/The-Gate-Project/CluAreas/total?color=41788a)](https://github.com/The-Gate-Project/CluAreas/releases)
 
-![Language](https://img.shields.io/static/v1?label=language&message=french%20%7C%20&color=informational)
+[![Language](https://img.shields.io/badge/language-french%20%7C%20schinese-014a69)](https://github.com/The-Gate-Project/CluAreas/releases)
+[![Games](https://img.shields.io/badge/games-BGT%20%a0%20BG%3AEE%20%a0%20EET-41788a)](https://github.com/The-Gate-Project/CluAreas/releases)
+
+<!--
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThe-Gate-Project%2FCluAreas&countColor=41788a&style=flat)
+
+[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-014a69)](https://github.com/The-Gate-Project/CluAreas/releases)
+-->
 
 **Auteur** : ****
 
@@ -21,10 +32,10 @@ Pour BGEE, BGSoD, BG2EE et EET. Également compatible avec IWDEE.
 - **Installer ce mod après Check the bodies, Trials of the Luremaster et Test Your Mettle**
 
 
-- **Il est préférable d'installer CluaFr après les mods qui ajoutent de nouvelles zones à la CluaConsole, ceux-ci peuvent se baser sur les nom anglais pour s'insérer dans le jeu.**
+- **Il est préférable d'installer CluAreas après les mods qui ajoutent de nouvelles zones à la CluaConsole, ceux-ci peuvent se baser sur les nom anglais pour s'insérer dans le jeu.**
 
 
-- **Il est préférable d'installer CluaFr après les mods d'interface (UI)** 
+- **Il est préférable d'installer CluAreas après les mods d'interface (UI)** 
 
 
 - **Pour utiliser la CLUAConsole le Debug Mode doit être activé à l'aide de l'un des mods ci-dessous.**
@@ -120,14 +131,14 @@ Mods **bientôt** supportés :
 ----------------
 
 
-Extraire l'archive dans le répertoire du jeu et lancer Setup-CluaFr.exe, puis suivre les indications.
+Extraire l'archive dans le répertoire du jeu et lancer Setup-CluAreas.exe, puis suivre les indications.
 
 
 ## Compatibilité :
 ----------------
 
 
-CluaFr devrait être installé après les mods qui ajoutent des nouvelles cartes et peuvent se baser sur les nom anglais pour s'insérer dans la CLUAConsole.
+CluAreas devrait être installé après les mods qui ajoutent des nouvelles cartes et peuvent se baser sur les nom anglais pour s'insérer dans la CLUAConsole.
 
 
 
@@ -139,6 +150,10 @@ Pour le composant Areas Cheats pour MODS, celui-ci doit s'installer impérativem
 
 
 Un grand merci à Selphira  !
+
+Thanks to : 
+
+- MephistoSatanDevil
 
 
 ## Version History :
@@ -158,3 +173,10 @@ V1.2
 - Cleanup and Typos in tp2
 - Uniformisation
 - Delete Unused folder
+
+V2.0
+
+- Simplified Chinese Translation thanks to MephistoSatanDevil.
+- Mod renamed from CLUAFr to CluAreas.
+- InfinityUI compatibility
+- EEFixpack compatibility (And probably other mods modifying Areas description in the CLUAConsole.)

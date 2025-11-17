@@ -1,4 +1,4 @@
-CluaFr
+CluAreas
 version 1.2
 
 
@@ -21,7 +21,7 @@ Compatibilité :
 - Il est préférable d'installer CluaFr après les mods qui ajoutent de nouvelles zones à la CluaConsole, ceux-ci peuvent se baser sur les nom anglais pour s'insérer dans le jeu.
 
 
-- Il est préférable d'installer CluaFr après les mods d'interface (UI) 
+- Il est préférable d'installer CluAreas après les mods d'interface (UI) 
 
 
 - Pour utiliser la CLUAConsole le Debug Mode doit être activé à l'aide de l'un des mods ci-dessous.
@@ -81,7 +81,7 @@ Installation :
 --------------
 
 
-Extraire l'archive dans le répertoire du jeu et lancer Setup-CluaFr.exe, puis suivre les indications.
+Extraire l'archive dans le répertoire du jeu et lancer Setup-CluAreas.exe, puis suivre les indications.
 
 
 Remerciement :
@@ -108,3 +108,10 @@ V1.2
 - Cleanup and Typos in tp2
 - Uniformisation
 - Delete Unused folder
+
+V2.0
+
+- Simplified Chinese Translation thanks to MephistoSatanDevil.
+- Mod renamed from CLUAFr to CluAreas.
+- InfinityUI compatibility
+- EEFixpack compatibility (And probably other mods modifying Areas description in the CLUAConsole.)

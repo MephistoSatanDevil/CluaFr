@@ -1,12 +1,12 @@
-BACKUP ~weidu_external/CluaFr/backup~    // location to store files for uninstall purposes
+BACKUP ~weidu_external/CluAreas/backup~    // location to store files for uninstall purposes
 SUPPORT ~(https://www.baldursgateworld.fr)~  // email address displayed if install fails
-README ~CluaFr/readme.txt~
+README ~CluAreas/readme.txt~
 
 ALWAYS
 
 	DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-	COPY ~CluaFr/Languages/french~				~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
-	COPY ~CluaFr/Languages/%LANGUAGE%~				~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
+	COPY ~CluAreas/Languages/french~				~weidu_external/CluAreas/Languages/autotra/%LANGUAGE%~
+	COPY ~CluAreas/Languages/%LANGUAGE%~				~weidu_external/CluAreas/Languages/autotra/%LANGUAGE%~
 	END
 
 	LAF autotra_workaround END
@@ -17,33 +17,33 @@ VERSION  ~2.0~
 
 ASK_EVERY_COMPONENT
 
-AUTO_TRA ~weidu_external/CluaFr/Languages/autotra/%LANGUAGE%~
+AUTO_TRA ~weidu_external/CluAreas/Languages/autotra/%LANGUAGE%~
 
 LANGUAGE ~Francais~
          ~french~
-         ~CluaFr/Languages/french/setup.tra~
-         ~CluaFr/Languages/french/MapsFrIWDEE.tra~
-         ~CluaFr/Languages/french/MapsFrEET.tra~
-         ~CluaFr/Languages/french/MapsFrEETALL.tra~
-         ~CluaFr/Languages/french/MapsFrBGEE.tra~
-         ~CluaFr/Languages/french/MapsFrCleanSoD.tra~
-         ~CluaFr/Languages/french/MapsFrSoD.tra~
-         ~CluaFr/Languages/french/MapsFrBG2EE.tra~
-         ~CluaFr/Languages/french/MapsFrMods.tra~
-         ~CluaFr/Languages/french/InfinityUI.tra~
+         ~CluAreas/Languages/french/setup.tra~
+         ~CluAreas/Languages/french/MapsFrIWDEE.tra~
+         ~CluAreas/Languages/french/MapsFrEET.tra~
+         ~CluAreas/Languages/french/MapsFrEETALL.tra~
+         ~CluAreas/Languages/french/MapsFrBGEE.tra~
+         ~CluAreas/Languages/french/MapsFrCleanSoD.tra~
+         ~CluAreas/Languages/french/MapsFrSoD.tra~
+         ~CluAreas/Languages/french/MapsFrBG2EE.tra~
+         ~CluAreas/Languages/french/MapsFrMods.tra~
+         ~CluAreas/Languages/french/InfinityUI.tra~
 		 
 LANGUAGE ~Simplified Chinese~
          ~schinese~
-         ~CluaFr/Languages/schinese/setup.tra~
-         ~CluaFr/Languages/schinese/MapsFrIWDEE.tra~
-         ~CluaFr/Languages/schinese/MapsFrEET.tra~
-         ~CluaFr/Languages/schinese/MapsFrEETALL.tra~
-         ~CluaFr/Languages/schinese/MapsFrBGEE.tra~
-         ~CluaFr/Languages/schinese/MapsFrCleanSoD.tra~
-         ~CluaFr/Languages/schinese/MapsFrSoD.tra~
-         ~CluaFr/Languages/schinese/MapsFrBG2EE.tra~
-         ~CluaFr/Languages/schinese/MapsFrMods.tra~
-         ~CluaFr/Languages/schinese/InfinityUI.tra~
+         ~CluAreas/Languages/schinese/setup.tra~
+         ~CluAreas/Languages/schinese/MapsFrIWDEE.tra~
+         ~CluAreas/Languages/schinese/MapsFrEET.tra~
+         ~CluAreas/Languages/schinese/MapsFrEETALL.tra~
+         ~CluAreas/Languages/schinese/MapsFrBGEE.tra~
+         ~CluAreas/Languages/schinese/MapsFrCleanSoD.tra~
+         ~CluAreas/Languages/schinese/MapsFrSoD.tra~
+         ~CluAreas/Languages/schinese/MapsFrBG2EE.tra~
+         ~CluAreas/Languages/schinese/MapsFrMods.tra~
+         ~CluAreas/Languages/schinese/InfinityUI.tra~
 
 
 	//////////////////////////////////////
@@ -57,27 +57,27 @@ REQUIRE_PREDICATE GAME_IS ~BGEE BG2EE EET IWDEE~ @1
 LABEL ~CluArea-Main~
 
 ACTION_IF (GAME_IS ~EET~) BEGIN
-    INCLUDE ~CluaFr/Lua/EET/MapsFrEET.tph~ // CheatsAreas pour EET
+    INCLUDE ~CluAreas/Lua/EET/MapsFrEET.tph~ // CheatsAreas pour EET
 	PRINT ~CheatsAreas pour EET~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND NOT GAME_INCLUDES ~sod~) BEGIN
-    /* INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour BGEE
+    /* INCLUDE ~CluAreas/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour BGEE
 	PRINT ~Cleaned CheatsAreas pour BGEE~ */
-    INCLUDE ~CluaFr/Lua/BGEE/MapsFrBGEE.tph~  // CheatsAreas pour BGEE
+    INCLUDE ~CluAreas/Lua/BGEE/MapsFrBGEE.tph~  // CheatsAreas pour BGEE
 	PRINT ~CheatsAreas pour BGEE~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND GAME_INCLUDES ~SoD~) BEGIN
-    INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour SoD
+    INCLUDE ~CluAreas/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour SoD
 	PRINT ~Cleaned CheatsAreas pour SoD~
-    INCLUDE ~CluaFr/Lua/SoD/MapsFrSoD.tph~  // CheatsAreas pour SoD
+    INCLUDE ~CluAreas/Lua/SoD/MapsFrSoD.tph~  // CheatsAreas pour SoD
 	PRINT ~CheatsAreas pour SoD~
 END
 ELSE ACTION_IF (GAME_IS ~BG2EE~) BEGIN
-    INCLUDE ~CluaFr/Lua/BG2EE/MapsFrBG2EE.tph~ // CheatsAreas pour BG2EE
+    INCLUDE ~CluAreas/Lua/BG2EE/MapsFrBG2EE.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour BG2EE~
 END
 ELSE ACTION_IF (GAME_IS ~IWDEE~) BEGIN
-    INCLUDE ~CluaFr/Lua/IWDEE/MapsFrIWDEE.tph~ // CheatsAreas pour BG2EE
+    INCLUDE ~CluAreas/Lua/IWDEE/MapsFrIWDEE.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour IWDEE~
 END
 
@@ -89,75 +89,75 @@ REQUIRE_PREDICATE GAME_IS ~BGEE BG2EE EET IWDEE~ @1
 
 ACTION_IF (GAME_IS ~EET~) BEGIN
 			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-				COPY_EXISTING ~CluaFr/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrEETALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAEET~ ~100~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~101~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~102~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~103~
 			END ELSE BEGIN
-				COPY_EXISTING ~CluaFr/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/EET/MapsFrEETALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrEETALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAEET~ ~2001~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~2493~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~2566~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~2919~
 			END
-    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrEETALL.tph~ // CheatsAreas pour EET
+    INCLUDE ~weidu_external/CluAreas/Lua/MapsFrEETALL.tph~ // CheatsAreas pour EET
 	PRINT ~CheatsAreas pour EET ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND NOT GAME_INCLUDES ~sod~) BEGIN
-    /* INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour BGEE
+    /* INCLUDE ~CluAreas/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour BGEE
 	PRINT ~Cleaned CheatsAreas pour BGEE~ */
 			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-				COPY_EXISTING ~CluaFr/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrBGEEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~104~
 			END ELSE BEGIN
-				COPY_EXISTING ~CluaFr/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/BGEE/MapsFrBGEEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrBGEEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~998~
 			END
-    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrBGEEALL.tph~  // CheatsAreas pour BGEE
+    INCLUDE ~weidu_external/CluAreas/Lua/MapsFrBGEEALL.tph~  // CheatsAreas pour BGEE
 	PRINT ~CheatsAreas pour BGEE ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BGEE~ AND GAME_INCLUDES ~SoD~) BEGIN
 			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-				COPY_EXISTING ~CluaFr/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrSoDALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~104~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~101~
 			END ELSE BEGIN
-				COPY_EXISTING ~CluaFr/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/SoD/MapsFrSoDALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrSoDALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUABG~ ~998~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoD~ ~2493~
 			END
-    INCLUDE ~CluaFr/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour SoD
+    INCLUDE ~CluAreas/Lua/SoD/MapsFrCleanSoD.tph~  // CleanCheatsAreas pour SoD
 	PRINT ~Cleaned CheatsAreas pour SoD~
-    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrSoDALL.tph~  // CheatsAreas pour SoD
+    INCLUDE ~weidu_external/CluAreas/Lua/MapsFrSoDALL.tph~  // CheatsAreas pour SoD
 	PRINT ~CheatsAreas pour SoD ALL~
 END
 ELSE ACTION_IF (GAME_IS ~BG2EE~) BEGIN
 			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-				COPY_EXISTING ~CluaFr/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrBG2EEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~102~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~103~
 			END ELSE BEGIN
-				COPY_EXISTING ~CluaFr/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/BG2EE/MapsFrBG2EEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrBG2EEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUASoA~ ~2566~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAToB~ ~2919~
 			END
-    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrBG2EEALL.tph~ // CheatsAreas pour BG2EE
+    INCLUDE ~weidu_external/CluAreas/Lua/MapsFrBG2EEALL.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour BG2EE ALL~
 END
 ELSE ACTION_IF (GAME_IS ~IWDEE~) BEGIN
 			ACTION_IF (MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
-				COPY_EXISTING ~CluaFr/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrIWDEEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAIWD~ ~105~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAHoW~ ~106~
 					REPLACE_TEXTUALLY ~REPLACE_CLUATotL~ ~107~
 			END ELSE BEGIN
-				COPY_EXISTING ~CluaFr/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~
+				COPY_EXISTING ~CluAreas/Lua/IWDEE/MapsFrIWDEEALL.tph~ ~weidu_external/CluAreas/Lua/MapsFrIWDEEALL.tph~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAIWD~ ~3307~
 					REPLACE_TEXTUALLY ~REPLACE_CLUAHoW~ ~3308~
 					REPLACE_TEXTUALLY ~REPLACE_CLUATotL~ ~3309~
 			END
-    INCLUDE ~weidu_external/CluaFr/Lua/MapsFrIWDEEALL.tph~ // CheatsAreas pour BG2EE
+    INCLUDE ~weidu_external/CluAreas/Lua/MapsFrIWDEEALL.tph~ // CheatsAreas pour BG2EE
 	PRINT ~CheatsAreas pour IWDEE ALL~
 END
 
@@ -204,35 +204,35 @@ ACTION_IF (GAME_IS ~IWDEE~ AND MOD_IS_INSTALLED ~infinity_ui.tp2~ 0) BEGIN
 BEGIN @11   // CheatsAreas pour les mods
 DESIGNATED 11
 LABEL ~CluArea-Mods~
-REQUIRE_PREDICATE (MOD_IS_INSTALLED ~CluaFr.tp2~ ~12~ OR MOD_IS_INSTALLED ~CluaFr.tp2~ ~13~) ~Necessite main component~
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~CluAreas.tp2~ ~12~ OR MOD_IS_INSTALLED ~CluAreas.tp2~ ~13~) ~Necessite main component~
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-CTB.TP2~ ~0~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/Checkthebodies.tph~ // CheatsAreas pour Check the bodies
+  INCLUDE ~CluAreas/Lua/Mods/Checkthebodies.tph~ // CheatsAreas pour Check the bodies
 	PRINT ~CheatsAreas pour Check the bodies~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-CTB.TP2~ ~1~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/CandlekeepChores.tph~ // CheatsAreas pour Check the bodies Candlekeep chores
+  INCLUDE ~CluAreas/Lua/Mods/CandlekeepChores.tph~ // CheatsAreas pour Check the bodies Candlekeep chores
 	PRINT ~CheatsAreas pour Candlekeep Chores~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~A7-TotLM-BG2EE~ ~0~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/TrialsoftheLuremaster.tph~ // CheatsAreas pour Trials of the Luremaster
+  INCLUDE ~CluAreas/Lua/Mods/TrialsoftheLuremaster.tph~ // CheatsAreas pour Trials of the Luremaster
 	PRINT ~CheatsAreas pour Trials of the Luremaster~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~A7-TESTYOURMETTLE.TP2~ ~0~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/TestYourMettle.tph~ // CheatsAreas pour Test Your Mettle
+  INCLUDE ~CluAreas/Lua/Mods/TestYourMettle.tph~ // CheatsAreas pour Test Your Mettle
 	PRINT ~CheatsAreas pour Test Your Mettle~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/IWD1_EET.tph~ // CheatsAreas pour IWD1_EET
+  INCLUDE ~CluAreas/Lua/Mods/IWD1_EET.tph~ // CheatsAreas pour IWD1_EET
 	PRINT ~CheatsAreas pour IWD1_EET~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD2_EET.TP2~ ~0~) BEGIN
-  INCLUDE ~CluaFr/Lua/Mods/IWD2_EET.tph~ // CheatsAreas pour IWD2_EET
+  INCLUDE ~CluAreas/Lua/Mods/IWD2_EET.tph~ // CheatsAreas pour IWD2_EET
 	PRINT ~CheatsAreas pour IWD2_EET~
 END
 
