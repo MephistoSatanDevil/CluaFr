@@ -4,7 +4,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ AND FILE_EXISTS ~BWP_Fixpack.installed~
 
 	// CheatsAreas pour Check the bodies
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR3520",.*"},~                      => 6000
+	~{"AR3520", "Stormhorns"},~                      => 6000
 	~{"AR3521",.*"},~                      => 6001
 	~{"AR3525",.*"},~                      => 6002
 	~{"AR3526",.*"},~                      => 6003

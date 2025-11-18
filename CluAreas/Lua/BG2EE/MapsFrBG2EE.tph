@@ -3,14 +3,14 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas Tutoriel                                                                           // MapsFrBG2EE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR0015",.*"},~                                            => 990
+	~{"AR0015", "Baldur's Gate Estate (Tutorial starts here)"},~                                            => 990
 	~{"AR0016",.*"},~                                            => 991
 	~{"AR0017",.*"},~                                            => 992
 	~{"AR0018",.*"},~                                            => 993
 
 	// CheatsAreas SoA                                                                                // MapsFrEET.tra
 
-	~{"AR0011",.*"},~                                            => 1566
+	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                                            => 1566
 	~{"AR0012",.*"},~                                            => 1567
 	~{"AR0013",.*"},~                                            => 1568
 	~{"AR0014",.*"},~                                            => 1569
@@ -334,7 +334,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour Les Gladiateurs de Thay
 
-	~{"OH8000",.*"},~                                            => 1887
+	~{"OH8000", "TBP2 - Suzail Tavern"},~                                            => 1887
 	~{"OH8100",.*"},~                                            => 1888
 	~{"OH8200",.*"},~                                            => 1889
 	~{"OH8300",.*"},~                                            => 1890
@@ -342,7 +342,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB : La Tour de Garde
 
-	~{"AR3000",.*"},~                                            => 1892
+	~{"AR3000", "Watcher's Keep"},~                                            => 1892
 	~{"AR3001",.*"},~                                            => 1893
 	~{"AR3003",.*"},~                                            => 1894
 	~{"AR3004",.*"},~                                            => 1895
@@ -372,7 +372,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB
 
-	~{"AR4000",.*"},~                                            => 1919
+	~{"AR4000", "Spirit Heads"},~                                            => 1919
 	~{"AR4500",.*"},~                                            => 1920
 	~{"AR5000",.*"},~                                            => 1921
 	~{"AR5001",.*"},~                                            => 1922

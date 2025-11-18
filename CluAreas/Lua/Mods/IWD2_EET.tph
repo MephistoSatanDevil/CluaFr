@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour IWD2_EET
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"IW1000",.*"},~                      => 6307
+	~{"IW1000", "Targos Docks"},~                      => 6307
 	~{"IW1001",.*"},~                      => 6308
 	~{"IW1002",.*"},~                      => 6309
 	~{"IW1003",.*"},~                      => 6310

@@ -3,14 +3,14 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas Tutoriel                                                                           // MapsFrBG2EE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR0015",.*"},~                      => 990
+	~{"AR0015", "Baldur's Gate Estate (Tutorial starts here)"},~                      => 990
 	~{"AR0016",.*"},~                      => 991
 	~{"AR0017",.*"},~                      => 992
 	~{"AR0018",.*"},~                      => 993
 
 	// CheatsAreas SoA                                                                                // MapsFrEETALL.tra
 
-	~{"AR0011",.*"},~                      => REPLACE_CLUASoA
+	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                      => REPLACE_CLUASoA
 	~{"AR0012",.*"},~                      => 2567
 	~{"AR0013",.*"},~                      => 2568
 	~{"AR0014",.*"},~                      => 2569
@@ -334,7 +334,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour Les Gladiateurs de Thay
 
-	~{"OH8000",.*"},~                      => 2887
+	~{"OH8000", "TBP2 - Suzail Tavern"},~                      => 2887
 	~{"OH8100",.*"},~                      => 2888
 	~{"OH8200",.*"},~                      => 2889
 	~{"OH8300",.*"},~                      => 2890
@@ -342,7 +342,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB : La Tour de Garde
 
-	~{"AR3000",.*"},~                      => 2892
+	~{"AR3000", "Watcher's Keep"},~                      => 2892
 	~{"AR3001",.*"},~                      => 2893
 	~{"AR3003",.*"},~                      => 2894
 	~{"AR3004",.*"},~                      => 2895
@@ -372,7 +372,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB
 
-	~{"AR4000",.*"},~                      => REPLACE_CLUAToB
+	~{"AR4000", "Spirit Heads"},~                      => REPLACE_CLUAToB
 	~{"AR4500",.*"},~                      => 2920
 	~{"AR5000",.*"},~                      => 2921
 	~{"AR5001",.*"},~                      => 2922

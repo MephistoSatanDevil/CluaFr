@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour BGEE                                                                        // MapsFrBGEE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"OH1000",.*"},~                      => 980                                           	
+	~{"OH1000", "Dorn - Random Encounter Area"},~                      => 980                                           	
 	~{"OH2000",.*"},~                      => 980
 	~{"OH2010",.*"},~                      => 980
 	~{"OH3000",.*"},~                      => 980

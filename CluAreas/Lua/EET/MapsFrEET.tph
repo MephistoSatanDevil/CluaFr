@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour BGEE                                                                         // MapsFrEET.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"BG0002",.*"},~                      => 1001  
+	~{"BG0002", "N Baldur's Gate: Temple of Helm"},~                      => 1001  
 	~{"BG0004",.*"},~                      => 1002  
 	~{"BG0005",.*"},~                      => 1003  
 	~{"BG0006",.*"},~                      => 1004  
@@ -491,20 +491,20 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas Les Fosses noires
 
-	~{"OH9310",.*"},~                      => 1486
+	~{"OH9310", "TBP - Arena 1"},~                      => 1486
 	~{"OH9350",.*"},~                      => 1487
 	~{"OH9360",.*"},~                      => 1488
 
 	// CheatsAreas Tutoriel
 
-	~{"TU0015",.*"},~                      => 1489
+	~{"TU0015", "Baldur's Gate Estate (Tutorial starts here)"},~                      => 1489
 	~{"TU0016",.*"},~                      => 1490
 	~{"TU0017",.*"},~                      => 1491
 	~{"TU0018",.*"},~                      => 1492
 
 	// CheatsAreas pour SoD
 
-	~{"BD0010",.*"},~                      => 1493
+	~{"BD0010", "Ducal Palace City Exterior"},~                      => 1493
 	~{"BD0020",.*"},~                      => 1494
 	~{"BD0030",.*"},~                      => 1495
 	~{"BD0040",.*"},~                      => 1496
@@ -580,7 +580,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas SoA
 
-	~{"AR0011",.*"},~                      => 1566
+	~{"AR0011", "Candlekeep Dream 1 (Do you remember Candlekeep\?)"},~                      => 1566
 	~{"AR0012",.*"},~                      => 1567
 	~{"AR0013",.*"},~                      => 1568
 	~{"AR0014",.*"},~                      => 1569
@@ -904,7 +904,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour Les Gladiateurs de Thay
 
-	~{"OH8000",.*"},~                      => 1887
+	~{"OH8000", "TBP2 - Suzail Tavern"},~                      => 1887
 	~{"OH8100",.*"},~                      => 1888
 	~{"OH8200",.*"},~                      => 1889
 	~{"OH8300",.*"},~                      => 1890
@@ -912,7 +912,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB : La Tour de Garde
 
-	~{"AR3000",.*"},~                      => 1892
+	~{"AR3000", "Watcher's Keep"},~                      => 1892
 	~{"AR3001",.*"},~                      => 1893
 	~{"AR3003",.*"},~                      => 1894
 	~{"AR3004",.*"},~                      => 1895
@@ -942,7 +942,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour ToB
 
-	~{"AR4000",.*"},~                      => 1919
+	~{"AR4000", "Spirit Heads"},~                      => 1919
 	~{"AR4500",.*"},~                      => 1920
 	~{"AR5000",.*"},~                      => 1921
 	~{"AR5001",.*"},~                      => 1922

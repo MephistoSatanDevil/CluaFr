@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour Icewind Dale 1                                                                          // MapsFrIWDEE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR1000",.*"},~                      => REPLACE_CLUAIWD
+	~{"AR1000","Easthaven (prologue)"},~                      => REPLACE_CLUAIWD
 	~{"AR1001",.*"},~                      => 3135
 	~{"AR1002",.*"},~                      => 3136
 	~{"AR1003",.*"},~                      => 3137
@@ -134,7 +134,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	
 	// CheatsAreas pour Heart of Winter                                                                        // MapsFrIWDEE.tra
 	
-	~{"AR9100",.*"},~                      => REPLACE_CLUAHoW   
+	~{"AR9100","Lonelywood"},~                      => REPLACE_CLUAHoW   
 	~{"AR9101",.*"},~                      => 3263
 	~{"AR9102",.*"},~                      => 3264
 	~{"AR9103",.*"},~                      => 3265

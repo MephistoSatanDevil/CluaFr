@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas pour BGEE                                                                          // MapsFrBGEE.tra
 	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
-	~{"AR0002",.*"},~                                            => REPLACE_CLUABG
+	~{"AR0002", "Temple of Helm (Baldur's Gate)"},~                                            => REPLACE_CLUABG
 	~{"AR0004",.*"},~                                            => 4002  
 	~{"AR0005",.*"},~                                            => 4003  
 	~{"AR0006",.*"},~                                            => 4004  
@@ -496,13 +496,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 	// CheatsAreas Les Fosses noires                                                                  // MapsFrEET.tra
 
-	~{"OH9310",.*"},~                                            =>> 1486
+	~{"OH9310", "The Black Pits: Arena 1"},~                                            =>> 1486
 	~{"OH9350",.*"},~                                            =>> 1487
 	~{"OH9360",.*"},~                                            =>> 1488
 
 	// CheatsAreas Tutoriel                                                                            // MapsFrEET.tra
 
-	~{"TU0015",.*"},~                                            =>> 1489
+	~{"TU0015", "Baldur's Gate Estate (Tutorial starts here)"},~                                            =>> 1489
 	~{"TU0016",.*"},~                                            =>> 1490
 	~{"TU0017",.*"},~                                            =>> 1491
 	~{"TU0018",.*"},~                                            =>> 1492
