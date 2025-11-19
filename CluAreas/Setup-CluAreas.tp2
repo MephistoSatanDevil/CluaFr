@@ -208,32 +208,38 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED ~CluAreas.tp2~ ~12~ OR MOD_IS_INSTALLED ~Clu
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-CTB.TP2~ ~0~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/Checkthebodies.tph~ // CheatsAreas pour Check the bodies
-	PRINT ~CheatsAreas pour Check the bodies~
+	PRINT ~CheatsAreas pour Check the bodies
+	~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-CTB.TP2~ ~1~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/CandlekeepChores.tph~ // CheatsAreas pour Check the bodies Candlekeep chores
-	PRINT ~CheatsAreas pour Candlekeep Chores~
+	PRINT ~CheatsAreas pour Candlekeep Chores
+	~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~A7-TotLM-BG2EE~ ~0~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/TrialsoftheLuremaster.tph~ // CheatsAreas pour Trials of the Luremaster
-	PRINT ~CheatsAreas pour Trials of the Luremaster~
+	PRINT ~CheatsAreas pour Trials of the Luremaster
+	~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~A7-TESTYOURMETTLE.TP2~ ~0~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/TestYourMettle.tph~ // CheatsAreas pour Test Your Mettle
-	PRINT ~CheatsAreas pour Test Your Mettle~
+	PRINT ~CheatsAreas pour Test Your Mettle
+	~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/IWD1_EET.tph~ // CheatsAreas pour IWD1_EET
-	PRINT ~CheatsAreas pour IWD1_EET~
+	PRINT ~CheatsAreas pour IWD1_EET
+	~
 END
 
   ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD2_EET.TP2~ ~0~) BEGIN
   INCLUDE ~CluAreas/Lua/Mods/IWD2_EET.tph~ // CheatsAreas pour IWD2_EET
-	PRINT ~CheatsAreas pour IWD2_EET~
+	PRINT ~CheatsAreas pour IWD2_EET
+	~
 END
 
   

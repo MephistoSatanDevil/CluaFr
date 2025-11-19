@@ -2,7 +2,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 
 	// CheatsAreas pour Trials of the Luremaster
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN	
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_Luremaster BEGIN	
 	~{"ID9700","Anauroch Castle - outer courtyard (TotL start area)"},~                      => 6113
 	~{"ID9701",.*"},~                      => 6114
 	~{"ID9702",.*"},~                      => 6115
@@ -27,7 +27,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_Luremaster AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END

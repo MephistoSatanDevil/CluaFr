@@ -2,7 +2,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 
 	// CheatsAreas pour Icewind Dale 1                                                                          // MapsFrIWDEE.tra
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_IWDEE_ALL BEGIN
 	~{"AR1000","Easthaven (prologue)"},~                      => REPLACE_CLUAIWD
 	~{"AR1001",.*"},~                      => 3135
 	~{"AR1002",.*"},~                      => 3136
@@ -184,7 +184,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_IWDEE_ALL AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END

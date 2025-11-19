@@ -3,7 +3,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ AND FILE_EXISTS ~BWP_Fixpack.installed~
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 	
 	// CheatsAreas pour Check the bodies Candlekeep chores
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_chores BEGIN
 	~{"AR3500", "Candlekeep"},~                      => 5986
 	~{"AR3501",.*"},~                      => 5987
 	~{"AR3502",.*"},~                      => 5988
@@ -20,7 +20,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ AND FILE_EXISTS ~BWP_Fixpack.installed~
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_chores AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END
@@ -30,12 +30,12 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ AND NOT FILE_EXISTS ~BWP_Fixpack.instal
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 
 	// CheatsAreas pour Check the bodies Candlekeep chores without BWS-FR
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_chores_not BEGIN
 	~--End CtB Areas~                             => 5985
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_chores_not AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END

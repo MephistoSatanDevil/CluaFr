@@ -24,7 +24,8 @@
 	{"AR3510", "(CTB)  (Ciné)  Gorion"},
 	{"AR3511", "(CTB)  (Ciné)  Jaheira"},
 	{"AR3512", "(CTB)  (Ciné)  Minsc"},
-	{"AR3513", "(CTB)  (Ciné)  Sarevok"},~
+	{"AR3513", "(CTB)  (Ciné)  Sarevok"},
+	--End CtB Chores Areas~
 
 
 @5986 = ~{"  ", "        CTB CANDLEKEEP CHORES        "},
@@ -42,7 +43,7 @@
 @5997 = ~{"AR3512", "(CTB)  (Ciné)  Minsc"},~
 @5998 = ~{"AR3513", "(CTB)  (Ciné)  Sarevok"},~
 
-@5999 = ~--End SoA 
+@5999 = ~--End SoA Areas
 	--CtB Areas
 	{"  ", "        CHECK THE BODIES        "},
 	{"AR3520", "(CTB)  Montagnes du Couchant"},
@@ -265,8 +266,7 @@
 @6105 = ~{"CB3665", "(CTB)  Hlondeth, Sous-sol Extaminos zone 5(E)"},~
 @6106 = ~{"CB3666", "(CTB)  Hlondeth, Sous-sol Extaminos zone 6(E)"},~
 @6107 = ~{"CB3667", "(CTB)  Hlondeth, Sous-sol Extaminos zone 7(E)"},~
-@6108 = ~{"CB3668", "(CTB)  Hlondeth, Sous-sol Extaminos zone 8(E)"}, 
-	--End CtB Areas~
+@6108 = ~{"CB3668", "(CTB)  Hlondeth, Sous-sol Extaminos zone 8(E)"},~
 
 	// CheatsAreas pour Test Your Mettle
 
@@ -274,8 +274,7 @@
 	{"A7#1FY", "Foyer, (Labyrinthe Modrone)"},~
 @6110 = ~{"A7#1EN", "Centre de contrôle, (Labyrinthe Modrone)"},~
 @6111 = ~{"A7#1FD", "Salle du Portail, (Labyrinthe Modrone)"},~
-@6112 = ~{"A7#1WZ", "Tête pensante Gélugon, (Labyrinthe Modrone)"}, 
-	--End Test Your Mettle! Areas~
+@6112 = ~{"A7#1WZ", "Tête pensante Gélugon, (Labyrinthe Modrone)"},~
 
 	// CheatsAreas pour Trials of the Luremaster
 	

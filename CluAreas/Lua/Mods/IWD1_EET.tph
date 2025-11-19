@@ -2,7 +2,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 
 	// CheatsAreas pour IWD1_EET
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_IWD1_EET BEGIN
 	~{"ID1000", "Easthaven (prologue)"},~                      => 6134
 	~{"ID1001",.*"},~                      => 6135
 	~{"ID1002",.*"},~                      => 6136
@@ -185,7 +185,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_IWD1_EET AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END

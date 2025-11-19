@@ -2,7 +2,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
 
 	// CheatsAreas pour BGEE                                                                         // MapsFrEETALL.tra
-	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings BEGIN
+	PATCH_DEFINE_ASSOCIATIVE_ARRAY strings_EET_ALL BEGIN
 	~{"BG0002", "N Baldur's Gate: Temple of Helm"},~                      => REPLACE_CLUAEET
 	~{"BG0004",.*"},~                      => 2002  
 	~{"BG0005",.*"},~                      => 2003  
@@ -486,7 +486,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 	~{"BG6000",.*"},~                      => 2481
 	~{"BG6001",.*"},~                      => 2482
 	~{"BG6100",.*"},~                      => 2483
-	~{"OH2000",.*"},~                      => 2484                                                           	
+	~{"OH2000",.*"},~                      => 2484
 	~{"OH3000",.*"},~                      => 2485
 
 	// CheatsAreas Les Fosses noires
@@ -1016,7 +1016,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bgee.lua~ BEGIN
 
 END
 
-    PATCH_PHP_EACH strings AS find => replace_ref BEGIN
+    PATCH_PHP_EACH strings_EET_ALL AS find => replace_ref BEGIN
         SPRINT replace (AT replace_ref)
         REPLACE_TEXTUALLY ~%find%~ ~%replace%~
     END
